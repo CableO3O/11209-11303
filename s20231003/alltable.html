@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>所有筆記</title>
+    <style>
+        .nav {
+            text-align: center;
+        }
+        .container{
+            text-align:center;
+        }
+        table,
+        tr,
+        td {
+            border: 1px black solid;
+            border-collapse: collapse;
+            margin: auto;
+            text-align: center;
+            table-layout: fixed;
+            word-wrap: break-word;
+        }
+
+        h1 {
+            text-align:center;
+        }
+
+        .none-border-top {
+            border-top: none;
+        }
+
+        .w-100 {
+            width: 100vh
+        }
+
+        .w-60 {
+            width: 60%;
+        }
+
+        .w-50 {
+            width: 50%;
+        }
+
+        .w-40 {
+            width: 40%;
+        }
+
+        .w-25 {
+            width: 25%;
+        }
+
+        .w-20 {
+            width: 20%;
+        }
+
+        /* vh會隨著使用者螢幕改變比例的單位 */
+        .h-60 {
+            height: 60vh;
+        }
+        .h-50{
+            height: 50vh;
+        }
+
+        .h-35 {
+            height: 35vh;
+        }
+
+        .h-30 {
+            height: 30vh;
+        }
+        .h-20{
+            height: 20vh;
+        }
+
+        .h-10 {
+            height: 10vh;
+        }
+
+        .bg-blue {
+            background-color: lightblue;
+        }
+
+        .bg-red {
+            background-color: lightcoral;
+        }
+
+        .bg-green {
+            background-color: lightgreen;
+        }
+
+        .bg-gray {
+            background-color: gray;
+        }
+
+        .wr-blue {
+            color: blue;
+        }
+
+        .wr-red {
+            color: brown;
+        }
+
+        .wr-green {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav" id="#">
+        <a href="#a">康乃爾筆記</a>
+        <a href="#b">東大筆記</a>
+        <a href="#c">麥肯錫筆記法</a>
+        <a href="#d">獲利時代</a>
+    </div>
+    <div class="container">
+        <h1 id="a">康乃爾筆記 </h1>       
+        <table class="w-100">
+            <tr class="h-50">
+                <td class="w-40 bg-blue">
+                    <h4 class="wr-blue">整理</h4>
+                </td>
+                <td class="w-60 bg-red">
+                    <h4 class="wr-red">筆記</h4>
+                </td>
+            </tr>
+            <tr class="h-20 bg-green">
+                <td colspan="2">
+                    <h4 class="wr-green">總結</h4>
+                </td>
+                <!-- <td>8</td> -->
+            </tr>
+        </table>
+        <a href="#">top</a>
+        <br>
+        <hr>
+        <h1 id="b">東大筆記</h1>
+        <table class="w-100 h-60">
+            <tr>
+                <td class="w-50 bg-blue">
+                    <h4 class="wr-blue">筆記</h4>
+                </td>
+                <td class="w-25 bg-red">
+                    <h4 class="wr-red">整理</h4>
+                </td>
+                <td class="w-25 bg-green">
+                    <h4 class="wr-green">總結</h4>
+                </td>
+            </tr>
+        </table>
+        <a href="#">top</a>
+        <br>
+        <hr>
+        <h1 id="c">麥肯錫筆記法</h1>
+        <table class="w-100">
+            <tr>
+                <td colspan="3" class="h-10 bg-gray">
+                    <h4>
+                        重點問題
+                    </h4>
+                </td>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+            </tr>
+            <tr class="h-60">
+                <td class="bg-red wr-red">
+                    <h4>現狀</h4>
+                </td>
+                <td class="bg-blue wr-blue">
+                    <h4>解釋</h4>
+                </td>
+                <td class="bg-green wr-green">
+                    <h4>行動</h4>
+                </td>
+            </tr>
+        </table>
+        <a href="#">top</a>
+        <br>
+        <hr>
+        <h1 id="d">獲利時代</h1>
+        <table class="w-100 h-50 bg-blue wr-blue">
+            <tr>
+                <td rowspan="2" class="w-20">
+                    <h4>1.Key Partnership</h4>
+                    <p>123131321316544894165419848917898718981754</p>
+                </td>
+                <td class="h-30 w-20">
+                    <h4>2. Key Activities</h4>
+                </td>
+                <td rowspan="2" class="w-20">
+                    <h4>4. Value Propositions</h4>
+                </td>
+                <td class="h-30 w-20">
+                    <h4>5. Customer Relationships</h4>
+                </td>
+                <td rowspan="2" class="w-20">
+                    <h4>7. Customer Segments</h4>
+                </td>
+            </tr>
+            <tr>
+                <!-- <td></td> -->
+                <td class="w-20 h-20">
+                    <h4>3. Key Resources</h4>
+                </td>
+                <!-- <td></td> -->
+                <td class="w-20 h-20">
+                    <h4>6. Channels</h4>
+                </td>
+                <!-- <td></td> -->
+            </tr>
+        </table>
+        <table class="w-100 h-20 none-border-top bg-blue wr-blue">
+            <tr class="none-border-top">
+                <td class="none-border-top w-50">
+                    <h4>
+                        8. Cost
+                    </h4>
+                </td>
+                <td class="none-border-top w-50">
+                    <h4>
+                        9. Revenue Streams
+                    </h4>
+                </td>
+            </tr>
+        </table>
+        <a href="#">top</a>
+    </div>
+</body>
+
+</html>

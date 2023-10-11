@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九宮格</title>
+    <style>
+        /* ,代表每個都會選到 */
+    table,tr,td{
+        border: 1px blue solid;
+        border-collapse: collapse;
+        text-align: center;
+        font-size: 100px;
+    }
+    /* 裡面的東西要以%來修改需要有一個基準，例如下面先設定table 100%，在設定td才有用 */
+    table{
+        width: 350px;
+        height: 100px;
+    }
+    td{
+        background-color: lightblue;
+    }
+    .s1>td{
+        color: red;
+    }
+    .s2>td{
+        color: yellow;
+    }
+    .s3>td{
+        color: green;
+    }
+</style>
+</head>
+
+<body>
+<h1>table九宮格</h1>
+    <table>
+        <tr class="s1">
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr class="s2">
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr class="s3">
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+    <br><br><hr>
+    <!-- colspan橫向表格合併 -->
+    <h1>table 九宮格橫向合併</h1>
+    <table>
+        <tr class="s1">
+            <td colspan="3">1</td>
+            <!-- <td>2</td> -->
+            <!-- <td>3</td> -->
+        </tr>
+        <tr class="s2">
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr class="s3">
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+    <br><br><hr>
+<!-- rowspan縱向表格合併 -->
+    <h1>table 九宮格縱向合併</h1>
+    <table>
+        <tr class="s1">
+            <td rowspan="3">1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr class="s2">
+            <!-- <td>4</td> -->
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr class="s3">
+            <!-- <td>7</td> -->
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+</body>
+
+</html>

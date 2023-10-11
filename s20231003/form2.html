@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text_red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <div class="container">
+            <h3>
+                單行文字
+            </h3>
+            <p>
+                <input type="text" name="" id="">
+                <br>
+                <!-- placeholder欄位提示 -->
+                <input type="text" placeholder="123">
+                <br>
+                <!-- required必填欄位 -->
+                <input type="text" required>
+            </p>
+        </div>
+        <!--input type="number" 數字選單 -->
+        <div class="container">
+            <h3>
+                數字
+            </h3>
+            <p>
+                <input type="number" name="" id="" value="123">
+            </p>
+        </div>
+        <!-- input type="date"日期選單 -->
+        <div class="container">
+            <h3>
+                日期
+            </h3>
+            <p>
+                <input type="date" name="" id="" value="2023-01-01">
+            </p>
+        </div>
+        <!-- select內加上option建立下拉式選單 -->
+        <div class="container">
+            <h3 class="text_red">下拉式選單</h3>
+            <p>
+                <select name="" id="">
+                    <option value="choose">請選擇</option>
+                    <option value="water">水</option>
+                    <option value="cola">可樂</option>
+                    <option value="soda">蘇打</option>
+                </select>
+            </p>
+        </div>
+        <!-- input type="radio"單選選項 -->
+        <div class="container">
+            <h3 class="text_red">單選選項</h3>
+            <p>
+                <input type="radio" name="item" id="item1">
+                <label for="">item1</label>
+                <input type="radio" name="item" id="item2">
+                <label for="">item2</label>
+                <input type="radio" name="item" id="item3">
+                <label for="">item3</label>
+            </p>
+        </div>
+        <!-- input type="checkbox"多選選項 -->
+        <div class="container">
+            <h3 class="text_red">多選選項</h3>
+            <p>
+                <!-- []代表陣列array -->
+                <input type="checkbox" name="mycheckbox[]" id="check1">
+                <label for="check1">html</label>
+                <input type="checkbox" name="mycheckbox[]" id="check2">
+                <label for="check2">css</label>
+                <input type="checkbox" name="mycheckbox[]" id="check3">
+                <label for="check3">php</label>
+            </p>
+        </div>
+        <!-- input type="password"供輸入密碼 -->
+        <div class="container">
+            <h3>密碼</h3>
+            <input type="password" name="" id="">
+        </div>
+        <div class="container">
+            <h3>submit</h3>
+            <input type="submit" value="確認">
+        </div>
+        <div class="container">
+            <h3>reset</h3>
+            <input type="reset" value="重整">
+        </div>
+        <!-- textarea供使用者輸入資料 -->
+        <div class="container">
+            <h3>textarea</h3>
+            <textarea name="" id="" cols="30" rows="5"></textarea>
+        </div>
+    </form>
+</body>
+
+</html>

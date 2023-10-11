@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hr報表</title>
+    <style>
+        /* 使用css讓textarea不能隨意改尺寸 */
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- fieldset+legend好看的邊框 -->
+        <fieldset>
+            <legend>hr報表</legend>
+            <form action="" method="post" enctype="multipart/form-data">
+                <!-- 姓名欄位 -->
+                <p>
+                    <label for="name">姓名:</label>
+                    <input type="text" name="" id="name">
+                </p>
+                <!-- 電話欄位 -->
+                <p>
+                    <label for="phone">電話:</label>
+                    <input type="text" name="" id="phone">
+                </p>
+                <!-- 地址欄位 -->
+                <p>
+                    <label for="address">地址:</label>
+                    <input type="text" name="" id="address">
+                </p>
+                <!-- 下拉式清單 -->
+                <p>
+                    <label for="">下拉式清單:</label>
+                    <select name="" id="">
+                        <option value="">請選擇</option>
+                        <option value="">a</option>
+                        <option value="">b</option>
+                        <option value="">c</option>
+                    </select>
+                </p>
+                <!-- 單選方塊 -->
+                <p>
+                    <label for="">單選:</label>
+                    <input type="radio" name="number" id="1">
+                    <label for="1">1</label>
+                    <input type="radio" name="number" id="2">
+                    <label for="2">2</label>
+                    <input type="radio" name="number" id="3">
+                    <label for="3">3</label>
+                </p>
+                <!-- 多選方塊 -->
+                <p>
+                    <label for="">多選:</label>
+                    <input type="checkbox" name="item" id="item1">
+                    <label for="item1">item1</label>
+                    <input type="checkbox" name="item" id="item2">
+                    <label for="item2">item2</label>
+                    <input type="checkbox" name="item" id="item3">
+                    <label for="item3">item3</label>
+                </p>
+                <!-- 備註欄位 -->
+                <p>
+                    <label for="">備註:</label><br>
+                    &nbsp;&nbsp;<textarea name="" id="" cols="30" rows="5"></textarea>
+                </p>
+                <!-- 上傳資料欄位 -->
+                <p>
+                    <input type="file" name="upfile" id="" size="30" multiple>
+                </p>
+                <!-- 隱藏欄位 -->
+                <p>
+                    <input type="hidden" name="">
+                </p>
+                <!-- 重整、確認按鈕 -->
+                <p>
+                    <input type="reset" value="重整">
+                    <input type="submit" value="確認">
+                </p>
+            </form>
+    </div>
+</body>
+
+</html>

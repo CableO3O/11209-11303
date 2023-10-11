@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord</title>
+</head>
+<style>
+    /* 定位 */
+    table,
+    tr,
+    td {
+
+        margin: auto;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .margin-auto {
+        margin: auto;
+    }
+
+    /* 文字大小 */
+    .font-x-small {
+        font-size: x-small;
+    }
+
+    .font-xx-small {
+        font-size: xx-small;
+    }
+
+    /* 文字底線 */
+    .text-decoration {
+        text-decoration: none;
+    }
+
+    /* 背景顏色 */
+    .bg-gray {
+        background-color: rgb(49, 51, 56);
+    }
+
+    .bg-black {
+        background-color: black
+    }
+
+    .bg-blue {
+        background-color: rgb(88, 101, 242);
+    }
+
+    /* 字體顏色 */
+    .wr-white {
+        color: white;
+    }
+
+    .wr-gray {
+        color: gray;
+    }
+
+    .wr-blue {
+        color: rgb(30, 97, 132);
+    }
+
+    /* 欄位寬度 */
+    .w-60 {
+        width: 60%;
+    }
+
+    .w-40 {
+        width: 40%;
+    }
+
+    .w-50 {
+        width: 50vh;
+    }
+
+    /* 欄位高度 */
+    .h-5 {
+        height: 5vh;
+    }
+</style>
+
+<body>
+    <!-- 左邊欄位 -->
+    <table class="bg-gray">
+        <tr>
+            <td class="w-60">
+                <!-- title -->
+                <h3 class="text-center wr-white">
+                    歡迎回來!
+                </h3>
+                <p class="text-center font-x-small wr-gray">
+                    我們很高興又見到您了!
+                </p>
+                <!-- 表單 -->
+                <form action="">
+                    <!-- 電子郵件輸入 -->
+                    <p>
+                        <label for="name" class="wr-gray font-xx-small">&nbsp;&nbsp;&nbsp;電子郵件或電話號碼</label>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;<input type="text" name="" id="name" class="bg-black wr-white w-50">
+                    </p>
+                    <!-- 密碼輸入 -->
+                    <p>
+                        <label for="name" class="wr-gray font-xx-small">&nbsp;&nbsp;&nbsp;密碼</label>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;<input type="password" name="" id="name" class="bg-black wr-white w-50">
+                    </p>
+                    <!-- 忘記密碼連結 -->
+                    <a href="" class="font-xx-small wr-blue text-decoration">
+                        忘記您的密碼
+                    </a>
+                    <!-- 登入按鈕 -->
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="登入" class="bg-blue wr-white w-50 h-5">
+                    </p>
+                    <!-- 註冊連結 -->
+                    <p class="wr-gray font-xx-small">
+                        需要一個帳號?
+                        <a href="" class="wr-blue text-decoration">註冊</a>
+                    </p>
+                </form>
+            </td>
+            <!-- 右邊欄位 -->
+            <td class="w-40">
+                <img src="./img/qrcode.png" alt="">
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

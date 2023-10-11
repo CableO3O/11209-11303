@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <!-- css語法、設定 -->
+    <style>
+        /* element */
+        h1{
+            color: red;
+        }
+        /* id #+id名稱 */
+        #testID{
+            color: green;
+        }
+        /* class .+class名稱*/
+        .testclass{
+            color: blue;
+        }
+        /* border 邊框尺寸、顏色設定 border-collapse邊框種類  text-align內容位置 font-size字體大小 */
+        table,th,tr,td{
+            border: 1px red solid;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 20px;
+        }
+        table{
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- css應用 -->
+    <h1>table picsum</h1>
+    <h3 id="testID">test id h3</h3>
+    <h3 class="testclass">test class h3</h3>
+    <!-- border=邊框 -->
+    <table>
+        <!-- table row -->
+        <tr>
+            <!-- table head -->
+            <!-- width=改尺寸 -->
+            <th width="10%">編號</th>
+            <th width="10%">圖片介紹</th>
+            <th width="80%">文字介紹</th>
+        </tr>
+        <tr>
+            <!-- table data -->
+            <td>1</td>
+            <td>
+                <img src="https://picsum.photos/id/237/100/100" alt="">
+            </td>
+            <td>中式餐廳</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td >
+                <img src="https://picsum.photos/id/238/100/100" alt="">
+            </td>
+            <td>西式餐廳</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>
+                <img src="https://picsum.photos/id/239/100/100" alt="">
+            </td>
+            <td>法式餐廳</td>
+        </tr>
+    </table>
+</body>
+
+</html>
