@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         /* 原本狀態 */
-        nav{
+        /* nav */
+        nav {
             width: 80%;
             height: 100px;
             margin: auto;
             background-color: black;
             text-align: center;
         }
-        nav>a{
+
+        nav>a {
             color: white;
             font-size: 40px;
             margin: 40px;
         }
-        nav>a:hover{
-            color:gray;
+
+        nav>a:hover {
+            color: gray;
         }
-        .box{
-            background-image:url(./img/01-01.jpg);            
+
+        /* box */
+        .box {
+            background-image: url(./img/01-01.jpg);
             background-repeat: no-repeat;
-            background-size:cover ;            
+            background-size: cover;
             margin: auto;
             width: 80%;
             height: 80vh;
+            /* transition: 變化時間 */
+            transition: 0.4s;
         }
+
         /* :hover 感應滑鼠滑過 */
         /* 滑過變色 */
         /* .box:hover{
@@ -36,11 +45,27 @@
             color: white;
         } */
         /* 背景圖滑過變化 */
-        .box:hover{
-            background-image: url(./img/01-03.jpg);            
+        .box:hover {
+            background-image: url(./img/01-03.jpg);
+        }
+
+        /* form */
+        form {
+            margin: auto;
+            text-align: center;
+            font-size: 100px;
+        }
+
+        fieldset>input {
+            font-size: 80px;
+        }
+
+        input:focus {
+            background-color: gray;
         }
     </style>
 </head>
+
 <body>
     <nav>
         <a href="">home</a>
@@ -52,5 +77,18 @@
 
         </div>
     </div>
+    <div class="container">
+        <form action="">
+            <fieldset>
+                <legend>Form表單</legend>
+                &nbsp;<label for="name">name:</label>
+                <input type="text" id="name">
+                <br>
+                <label for="phone">phone:</label>
+                <input type="text" id="phone">
+            </fieldset>
+        </form>
+    </div>
 </body>
+
 </html>
