@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* css   attribute選擇器 */
+        div[test="123"] {
+            color: red;
+        }
+        input[type="text"]{
+            background-color: aqua;
+        }
+        input[type="number"]{
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" test="123">
+            123
+        </div>
+        <div class="box" test="456">
+            456
+        </div>
+    </div>
+    <div class="container">
+        <form action="">
+            <p>
+                <label for=""></label>
+                <input type="text">
+            </p>
+            <p>
+                <label for=""></label>
+                <input type="text">
+            </p>
+            <p>
+                <label for=""></label>
+                <input type="text">
+            </p>
+            <p>
+                <label for=""></label>
+                <input type="number">
+            </p>
+            <p>
+                <label for=""></label>
+                <input type="number">
+            </p>
+        </form>
+    </div>
+
+</body>
+
+</html>
