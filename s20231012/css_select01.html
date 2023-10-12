@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- > 空格 + ~ . -->
     <style>
-        .p1,.p2,.p3{
+        .p1,
+        .p2,
+        .p3 {
             color: aqua;
         }
+
         /* .p1{
             color: aqua;
         }
@@ -18,11 +22,17 @@
         .p3{
             color: aqua;
         } */
-        .div2>.p21{
+        /* >指下一層，也可以指定下很多層 */
+        .div2>.p21 {
             color: brown;
+        }
+
+        .div2>.box1>.box2>p {
+            color: deeppink;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <!-- ， -->
@@ -31,8 +41,9 @@
         <p class="p1">eoirgjebpoejrbpeb</p>
         <p class="p2">eoirgjebpoejrbpeb</p>
         <p class="p3">eoirgjebpoejrbpeb</p>
-        
-        <br><hr><br>
+
+        <br>
+        <hr><br>
 
         <h3>></h3>
         <h4>下一層</h4>
@@ -46,14 +57,20 @@
             </p>
             <p class="p21">
                 &nbsp; &nbsp;Lorem ipsum dolor sit amet.
-                <div class="div">
-                    &nbsp; &nbsp;再加一層區塊就不會變色Lorem ipsum dolor sit amet.
-                </div>            
+            <div class="div">
+                &nbsp; &nbsp;再加一層區塊就不會變色Lorem ipsum dolor sit amet.
+            </div>
             </p>
             <p class="p21">
                 &nbsp; &nbsp;Lorem ipsum dolor sit amet.
             </p>
+            <div class="box1">
+                <div class="box2">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
+
 </html>
