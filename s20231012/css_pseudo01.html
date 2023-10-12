@@ -59,9 +59,36 @@
         fieldset>input {
             font-size: 80px;
         }
+        /* :focus 點擊變化 */
 
         input:focus {
             background-color: gray;
+        }
+        /* table,tr,td */
+        table,tr,th,td{
+            text-align: center;
+            border: 1px solid black;
+            border-collapse: collapse;
+            font-size: 40px;
+        }
+        table{
+            width: 100%;
+        }
+        /* tr,th,td{
+            width: 30%;
+        } */
+        .money{
+            text-align: right;
+        }
+        /* ::before在最前面、::after在最後面 content加符號 */
+        .money::before{
+            content:"$"
+        }
+        .money::after{
+            content:"元"
+        }
+        .status::after{
+            content: "%";
         }
     </style>
 </head>
@@ -88,6 +115,34 @@
                 <input type="text" id="phone">
             </fieldset>
         </form>
+    </div>
+    <div class="container">
+        <table>
+            <tr>
+                <th width="15%">name</th>
+                <th width="20%">bonus</th>
+                <th width="20%">績效成長</th>
+                <th>備註</th>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td class="money">1000</td>
+                <td class="status">60</td>
+                <tr></tr>
+            </tr>
+            <tr>
+                <td>b</td>
+                <td class="money">2000</td>
+                <td class="status">30</td>
+                <tr></tr>
+            </tr>
+            <tr>
+                <td>c</td>
+                <td class="money">3000</td>
+                <td class="status">20</td>
+                <tr></tr>
+            </tr>
+        </table>
     </div>
 </body>
 
