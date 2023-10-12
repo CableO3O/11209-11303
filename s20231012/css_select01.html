@@ -7,6 +7,7 @@
     <title>Document</title>
     <!-- > 空格 + ~ . -->
     <style>
+        /* a1,a2,a3 用,相連的標籤會一起被影響 */
         .p1,
         .p2,
         .p3 {
@@ -22,14 +23,29 @@
         .p3{
             color: aqua;
         } */
-        /* >指下一層，也可以指定下很多層 */
+        /* a1>a2  指a1下一層的所有a2(不包含a2內的標籤)都會被影響 */
         .div2>.p21 {
             color: brown;
         }
-
+        /* 也可以指定下很多層，只有最後一個被指定的才會有影響 */
         .div2>.box1>.box2>p {
             color: deeppink;
         }
+
+        /* a1(空格)a2代表a1裡面的a2標籤都會影響到 */
+        /* 在div3中的所有p都會被影響 */
+        .div3 p {
+            color: limegreen;
+        }
+        /* a1+a2  代表a1標籤外的第1個a2標籤會被影響  */
+        .div4+p{
+            color: coral;
+        }
+        /* a1~a2  代表a1標籤外的所有a2標籤都會被影響 */
+        .div5~p{
+            color: dodgerblue;
+        }
+
     </style>
 </head>
 
@@ -57,9 +73,9 @@
             </p>
             <p class="p21">
                 &nbsp; &nbsp;Lorem ipsum dolor sit amet.
-            <div class="div">
-                &nbsp; &nbsp;再加一層區塊就不會變色Lorem ipsum dolor sit amet.
-            </div>
+            </p>
+            <p class="p21">
+                <p>再加一層區塊就不會變色Lorem ipsum dolor sit amet.</p>
             </p>
             <p class="p21">
                 &nbsp; &nbsp;Lorem ipsum dolor sit amet.
@@ -70,6 +86,40 @@
                 </div>
             </div>
         </div>
+        <hr>
+        <h3>(空格)</h3>
+        <h4>裡面全部</h4>
+        <div class="div3">
+            <p>asdferhrh</p>
+            <div class="div31">
+                <p>456789</p>
+                <div class="div311">
+                    <p>123456789</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h3>+</h3>
+        <h4>標籤外第1個</h4>
+        <div class="div4">
+            <p>不會被影響</p>
+        </div>
+        <p>會被影響</p>
+        <p>不會被影響</p>
+        <p>不會被影響</p>
+        <p>不會被影響</p>
+        <p>不會被影響</p>
+        <hr>
+        <h3>~</h3>
+        <h4>標籤外的全部</h4>
+        <div class="div5">
+            <p>不會被影響</p>
+        </div>
+        <p>會被影響</p>
+        <p>會被影響</p>
+        <p>會被影響</p>
+        <p>會被影響</p>
+        <p>會被影響</p>
     </div>
 </body>
 
