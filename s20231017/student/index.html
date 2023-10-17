@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        table,
+        tr,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            color: red;
+            margin: auto;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+        }
+        /* :nth-child(odd)單行選擇、:nth-child(even)雙行選擇 */
+        tr:nth-child(odd){
+            background-color: lightblue;
+        }
+        tr:nth-child(even){
+            background-color:lightgray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>student list</h1>
+        <table>
+            <tr>
+                <td>id</td>
+                <td>name</td>
+                <td>mobile</td>
+                <td>img</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>amy</td>
+                <td>0911-111-111</td>
+                <td>amy.jpg</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>bob</td>
+                <td>0922-222-222</td>
+                <td>bob.jpg</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>cat</td>
+                <td>0933-333-333</td>
+                <td>cat.jpg</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <!-- 可以直接在網址內賦予它變數，網址內+?id= -->
+                    <a href="./creat.html?id=1">新增</a>
+                </td>
+                <td>
+                    <a href="./delete.html">刪除</a>
+                </td>
+                <td>
+                    <a href="./edit.html">修改</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
