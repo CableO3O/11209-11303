@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        a{  
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            /* display: block;可以讓超連接變成區塊並自動換行也可以調大小，點擊該區塊任何地方都可以觸發超連結，也可以在裡面放背景圖片，變成背景圖片超連結 */
+            display: block;
+            margin-top: 10px;
+            margin-right: 10px;
+            background-image:url(./img/01-03.jpg);
+            background-size: 100px 100px;
+        }
+        p{
+            /* display: inline;可以讓區塊變為可放在同一行，但變得不能調整大小 */
+            display: inline;
+            background-color: brown;
+            margin: 10px;
+            /* 下面改大小變沒用 */
+            width: 100px;
+            height: 100px;
+        }
+        h1{
+            /* display: inline;可以讓區塊變為可放在同一行，也可以調整大小 */
+            display: inline-block;
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="">home</a>
+        <a href="">about</a>
+        <a href="">132</a>
+    </nav>
+    <p>
+        123456
+    </p>
+    <p>
+        789465
+    </p>
+    <p>
+        65487913
+    </p>
+    <h1>456</h1>
+    <h1>456</h1>
+    <h1>465</h1>
+</body>
+</html>
