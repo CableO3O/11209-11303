@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 2000px;
+            font-size: 28px;
+        }
+        .pos-static {
+            left: 30px;
+        }
+
+        .pos-relative {
+            position: relative;
+            left: 30px;
+        }
+        .pos-fixed {
+            position: fixed;
+            right: 100px;
+            bottom: 30px;
+        }
+        h3{
+            /* display: none;不顯示標籤內容 */
+            display: none;
+        }
+        .nav-fixed{
+            position: fixed;
+            top: 0%;
+            width: 100%;
+            height: 15vh;
+            background-color: lightblue;
+            /* 增加z軸，數字越高越上面，才部會與其他區塊在同一平面，建議初始100 */
+            z-index: 100;
+        }
+        </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="nav-fixed">
+
+        </nav>
+        <h3>position</h3>
+        <br>
+        <hr>
+        <br>
+        <h4>static</h4>
+        <p class="pos-static">
+            Lorem ipsum dolor sit amet.
+        </p>
+        <br>
+        <hr>
+        <br>
+        <h4>relative</h4>
+        <p class="pos-relative">
+            Lorem ipsum dolor sit amet.
+        </p>
+        <br>
+        <hr>
+        <br>
+        <h4>fixed</h4>
+        <p class="pos-fixed">
+            Lorem ipsum dolor sit amet.
+        </p>
+    </div>
+</body>
+
+</html>
