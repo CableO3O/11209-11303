@@ -43,6 +43,47 @@
             /* 增加z軸，數字越高越上面，才部會與其他區塊在同一平面，建議初始100 */
             z-index: 100;
         }
+        /* position: relative;絕對定位 */
+        .box-relative{
+            position: relative;
+            width: 800px;
+            height: 800px;
+            background-color: lightgreen;
+        }
+        /* position: absolute;相對定位 */
+        /* position: absolute會根據已訂位的區塊來相對定位 */
+        .box-absolute1{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: lightpink;
+            top: 0px;
+            right: 0px;
+        }
+        .box-absolute2{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+            top: 0px;
+            left: 0px;
+        }
+        .box-absolute3{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: lightslategray;
+            bottom: 0px;
+            left: 0px;
+        }
+        .box-absolute4{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            bottom: 0px;
+            right: 0px;
+        }
         </style>
 </head>
 
@@ -80,6 +121,12 @@
         <p class="pos-sticky">
             Lorem ipsum dolor sit amet.
         </p>
+        <div class="box-relative">
+            <div class="box-absolute1"></div>
+            <div class="box-absolute2"></div>
+            <div class="box-absolute3"></div>
+            <div class="box-absolute4"></div>
+        </div>
     </div>
 </body>
 
