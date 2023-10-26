@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            /* display: flex;彈性盒，可以更輕鬆地設計靈活的響應式佈局結構，而無需使用浮動或定位。 */
+            display: flex;
+            /*  flex-direction:屬性定義容器想要堆疊彈性項目的方向 */
+            /* colcum垂直堆疊彈性項目(沒在用)，row水平堆疊彈性項目 */ 
+            flex-direction: row;
+            /* flex-wrap:屬性指定彈性項目是否應該換行。 */
+            /* wrpa必要時換行，nowrap不換行 */
+            flex-wrap: nowrap;
+            /* justify-content屬性用於橫向對齊彈性項目 */
+            /* center將彈性項目對齊在容器的中心(最好用)，flex-start將彈性項目對齊在容器的開頭 */
+            /* flex-end將彈性項目對齊到容器的末端，space-around顯示彈性項目，並在行前、行間和行後留出空間 */ 
+            justify-content:center;
+            /* align-items屬性用於縱向對齊彈性項目 */
+            /* center將彈性項目對齊在容器的中心(最好用)，flex-start將彈性項目對齊在容器的頂端 */
+            /* flex-end將彈性項目對齊到容器的底部，stretch如果沒有設定項目高度會自動拉成盒高 */
+            align-items: center;
+            background-color: lightblue;
+            height: 80vh;
+        }
+        .item{
+            width: 25%;
+            height: 300px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <!-- <div class="item">item4</div>
+        <div class="item">item5</div>
+        <div class="item">item6</div>
+        <div class="item">item7</div> -->
+    </div>
+</body>
+</html>
