@@ -26,36 +26,36 @@
             height: 200px;
             background-color: lightgreen;
         }
-        .box1>h1{
-            text-align: center;
-            margin-top: 20px;
-            font-size: 150px;
+        .box1::before{
+            content: "O";
+            margin-left: 40px;
+            font-size: 200px;
             font-family:'Courier New', Courier, monospace;
         }
         .box2{
             width: 200px;
             height: 200px;
             background-color: lightcoral;
-            font-family:'Courier New', Courier, monospace;
         }
-        .box2>h1{
-            text-align: center;
-            margin-top: 20px;
-            font-size: 150px;
+        .box2::before{
+            content: "X";
+            margin-left: 40px;
+            font-size: 200px;
+            font-family:'Courier New', Courier, monospace;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="box1"><h1>O</h1></div>
+        <div class="box1"></div>
         <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
-        <div class="box1"><h1>O</h1></div>
-        <div class="box2"><h1>X</h1></div>
-        <div class="box2"><h1>X</h1></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
         <div class="box"></div>
-        <div class="box1"><h1>O</h1></div>
+        <div class="box1"></div>
     </div>
 </body>
 </html>
