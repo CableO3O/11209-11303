@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 700px;
+            height: 700px;
+            margin: auto;
+            margin-top: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            background-color: lightblue;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: lightgray;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: lightgreen;
+        }
+        .box1>h1{
+            text-align: center;
+            margin-top: 20px;
+            font-size: 150px;
+            font-family:'Courier New', Courier, monospace;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: lightcoral;
+            font-family:'Courier New', Courier, monospace;
+        }
+        .box2>h1{
+            text-align: center;
+            margin-top: 20px;
+            font-size: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"><h1>O</h1></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box1"><h1>O</h1></div>
+        <div class="box2"><h1>X</h1></div>
+        <div class="box2"><h1>X</h1></div>
+        <div class="box"></div>
+        <div class="box1"><h1>O</h1></div>
+    </div>
+</body>
+</html>
