@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: auto;
+}
+.container{
+    width: 1024px;
+    height: 768px;
+    /* background-color: aqua; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.main{
+    width: 1024px;
+    height: 65px;
+    /* background-color: blue; */
+   }
+.main>a{
+    display: block;
+    width: 1024px;
+    height: 65px;
+    background-image: url(./img/logo.png);
+    background-size: cover;
+}
+.menu{
+    width: 215px;
+    height: 683px;
+    /* background-color: lawngreen; */
+}
+.menu-nav{
+    width: 215px;
+    height: 658px;
+    /* background-color: cadetblue; */
+}
+
+.menu-nav>h1{
+    font-size: 24px;
+    font-weight: 500px;
+    font-family: "標楷體";
+    text-decoration:underline;
+    text-decoration-color: black;
+    text-underline-offset: 5px;
+    text-align: center;
+    color: #FF00FF;
+}
+table.menu-table tr{
+    background-image: url(./img/menu1.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    font-family: "標楷體";
+    font-size: 16px;
+    color: black;
+}
+table.menu-table tr:hover{
+    background-image: url(./img/menu2.png);
+}
+.menu-nav>tr,td{
+    width: 200px;
+    height: 35px;
+}
+.menu-update{
+    width: 215px;
+    height: 25px;
+    /* background-color: crimson; */
+    font-size: 8px;
+    font-family: "標楷體";
+    color: black;
+    text-align: center;
+}
+.content{
+    width: calc(1024px - 215px);
+    height: 683px;
+    /* background-color: chocolate; */
+}
+.content-marquee{
+    width: calc(1024px - 215px);
+    height: 29px;
+    font-size: 24px;
+    font-family: "標楷體";
+    color:#0000FF;
+    /* background-color: burlywood; */
+    white-space: nowrap;
+    position: relative;
+}
+.content-marquee-word{
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+}
+@keyframes marquee {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.content-footer{
+    height: calc(100% - 29px);
+}
+iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.footer{
+    width: 1024px;
+    height: 20px;
+    /* background-color: cornflower; */
+    text-align: center;
+    font-family: "標楷體";
+}

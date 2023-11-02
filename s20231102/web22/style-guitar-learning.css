@@ -1,0 +1,15 @@
+.container{
+    background-image: url(./img/0101.jpg);
+    text-align: center;
+    width: 770px;
+    height: 654px;
+}
+table{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+button:hover{
+    color: white;
+    background-color: black;
+}

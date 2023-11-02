@@ -1,0 +1,27 @@
+
+.container{
+    width: 770px;
+    height: 654px;
+    background-image: url(./img/0101.jpg);
+    margin: auto;
+}
+.title>p{
+    font-size: 18px;
+    font-family: "標楷體";
+    color: #FF0000;
+    text-align: center;
+}
+.link>table,tr,td{
+    margin: auto;
+    /* border: 1px solid black;
+    border-collapse: collapse; */
+}
+.link>table{
+    width: 100%;
+    text-align: center;
+}
+.main>p{
+    color: #FF0000;
+    font-size: 16px;
+    font-family: "標楷體";
+}
