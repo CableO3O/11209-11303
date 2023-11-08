@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 1024px;
+    height: 768px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* background-color: aqua; */
+    margin: auto;
+}
+.main{
+    width: 1000px;
+    height: 65px;
+    /* background-color: red; */
+}
+.main-top>a{
+    display: block;
+    width: 994px;
+    height: 60px;
+    background-image: url(./img/logo.png);
+    background-size: cover;
+    margin: auto;
+}
+.nav{
+    width: 215px;
+    height: calc(768px - 65px - 20px);
+    border: 1px solid black;
+    /* background-color: orange; */
+}
+.nav-menu{
+    width: 215px;
+    height: calc(768px - 65px - 20px - 25px);
+    /* background-color: yellow; */
+    font-family: "標楷體";
+    font-weight: 500;
+    text-align: center;
+}
+.nav-menu>h1{
+    font-size: 24px;
+    text-decoration: underline black;
+    color: #FF00FF;
+}
+.nav-menu>.label{
+    margin: auto;
+    color: black;
+    font-size: 16px;
+    width: 200px;
+    height: 35px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    background-image: url(./img/menu1.png);
+    
+}
+.nav-menu>.label:hover{
+    background-image:url(./img/menu2.png)
+}
+.nav-update{
+    width: 100%;
+    height: 25px;
+    font-family: "標楷體";
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    /* background-color: green; */
+}
+.box{
+    width: calc(1024px - 215px);
+    /* height: calc(768px - 65px -20px); */
+    /* background-color: blue; */
+    border: 1px solid black;
+}
+.box-marquee{
+    /* width: 100%; */
+    height: 29px;
+    background-color: pink;
+}
+.box-marquee>marquee{
+    font-family: "標楷體";
+    font-size:24px;
+    color: blue; 
+}
+.box-content{
+    height: calc(100% - 29px);
+    /* background-color: purple; */
+}
+iframe{
+    width: 100%;
+    height: 100%; 
+}
+.footer{
+    width: 1024px;
+    height: 20px;
+    border: 1px solid black;
+    font-size: 16px;
+    text-align: center;
+    font-family: "標楷體";
+    /* background-color: black; */
+}
