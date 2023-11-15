@@ -9,8 +9,6 @@
 .main{
     width: 1000px;
     height: 65px;
-    border: 3px solid lightgray;
-    border-style: double;
     /* background-color: aqua; */
 }
 .top{
@@ -30,8 +28,6 @@
     /* background-color: lightblue; */
     display: flex;
     flex-wrap: wrap;
-    border: 3px solid lightgray;
-    border-style: double;
 }
 .nav-menu{
     width: 215px;
@@ -79,7 +75,7 @@
 }
 .box{
     width: 770px;
-    height: calc(768px - 65px - 20px );
+    height: calc(768px - 65px - 20px - 10px );
     /* border: 3px solid lightgray;
     border-style: double; */
     /* background-color: lightcyan; */
@@ -90,14 +86,11 @@ marquee{
     font-family: "標楷體";
     font-size: 24px;
     color: blue;
-    border: 3px solid lightgray;
-    border-style: double;
+    /* background-color: blueviolet; */
 }
 iframe{
     width: 770px;
     height: calc(768px - 65px - 29px - 20px - 10px);
-    border: 3px solid lightgray;
-    border-style: double;
     /* background-color: blueviolet; */
 }
 .footer{
@@ -107,7 +100,5 @@ iframe{
     font-size: 16px;
     font-family:"標楷體";
     text-align: center;
-    border: 3px solid lightgray;
-    border-style: double;
     /* background-color: darkgreen; */
 }
