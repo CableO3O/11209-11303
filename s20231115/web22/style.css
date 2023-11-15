@@ -5,11 +5,15 @@
     flex-wrap: wrap;
     margin: auto;
     justify-content:center;
+    
 }
 .main{
-    width: 1000px;
+    width: 1006px;
     height: 65px;
     /* background-color: aqua; */
+    border: 3px solid lightgray;
+    border-style: double;
+    
 }
 .top{
     width: 100%;
@@ -28,6 +32,8 @@
     /* background-color: lightblue; */
     display: flex;
     flex-wrap: wrap;
+    border: 3px solid lightgray;
+    border-style: double;
 }
 .nav-menu{
     width: 215px;
@@ -65,40 +71,48 @@
     background-image: url(./image/menu2.png)
 }
 .nav-update{
-    width: 215px;
+    width: 225px;
     height: 25px;
     /* background-color:lightgreen; */
     font-family:"標楷體";
     font-size: 16px;
     color: black;
     text-align: center;
+    border: 3px solid lightgray;
+    border-style: double;
 }
 .box{
     width: 770px;
-    height: calc(768px - 65px - 20px - 10px );
-    /* border: 3px solid lightgray;
-    border-style: double; */
-    /* background-color: lightcyan; */
+    height: calc(768px - 65px - 20px );
+    border: 3px solid lightgray;
+    border-style: double;
+    /* background-color: black; */
 }
 marquee{
-    width: 770px;
-    height: 29px;
+    width: 765px;
+    height: 25px;
     font-family: "標楷體";
     font-size: 24px;
     color: blue;
+    border: 3px solid lightgray;
+    border-style: double;
     /* background-color: blueviolet; */
 }
 iframe{
-    width: 770px;
+    width: 765px;
     height: calc(768px - 65px - 29px - 20px - 10px);
-    /* background-color: blueviolet; */
+    border: 3px solid lightgray;
+    border-style: double;
+    /* background-color: red; */
 }
 .footer{
-    width: 1000px;
+    width: 1006px;
     height: 20px;
     color: black;
     font-size: 16px;
     font-family:"標楷體";
     text-align: center;
     /* background-color: darkgreen; */
+    border: 3px solid lightgray;
+    border-style: double;
 }
