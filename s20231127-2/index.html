@@ -12,11 +12,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
         </script>
+        <script src="https://kit.fontawesome.com/030ac11f0f.js" crossorigin="anonymous"></script>
     <title>Title</title>
     <style>
         body {
             padding-top: 105px;
-            background-color:darkslateblue
+            background-color:rgb(18, 15, 8)
         }
 
         .sticky-top {
@@ -24,7 +25,8 @@
             top: 0;
             width: 99%;
             height: 80px;
-            background-color: lightblue;
+            background-color: rgb(37, 77, 137);
+            
         }
 @media (max-width: 991px) {
   .bg-small-screen {
@@ -44,13 +46,12 @@
 </head>
 
 <body>
-    <div id="top" style="height: 20px;"></div>
     <!-- 置頂選單 -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
                 <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top ">
-                    <a class="navbar-brand ms-5" href="#top">首頁</a>
+                    <a class="navbar-brand ms-5" style="color: #f8f9fa;" href="#top">首頁</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -59,14 +60,23 @@
                     <div class="collapse navbar-collapse bg-small-screen" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#section1">照片輪播</a>
+                                <a class="nav-link active" aria-current="page" style="color: #f8f9fa;" href="#">願望清單</a>
+                            </li>
+                            <li class="nav-item dropdown" >
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false" style="color: #f8f9fa;">
+                                    選單
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">您的商店</a></li>
+                                    <li><a class="dropdown-item" href="#">矚目新品</a></li>
+                                    <li><a class="dropdown-item" href="#">類別</a></li>
+                                    <li><a class="dropdown-item" href="#">點數商店</a></li>
+                                    <li><a class="dropdown-item" href="#">實驗室</a></li>
+                                </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#section2">card</a>
-                            </li>
-                            
-                            <li class="nav-item">
-                                <a class="nav-link disabled" aria-disabled="true">歡迎登入!OOO</a>
+                                <a class="nav-link disabled" aria-disabled="true" style="color: #f8f9fa;">歡迎登入!OOO</a>
                             </li>
                         </ul>
                         <button class="btn btn-primary me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
@@ -74,7 +84,7 @@
                           </button>
                         <form class="d-flex me-5" role="search" >
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
+                            <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                         </form>
                         
                     </div>
@@ -82,7 +92,7 @@
             </div>
         </div>
     <!-- 照片輪播 -->
-    <div class="row justify-content-center align-items-center" style="padding: 100px;" id="section1">
+    <div class="row justify-content-center align-items-center" style="padding: 50px;" id="section1">
         <div class="col-10">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="text-align: center;">
                 <div class="carousel-inner">
@@ -90,13 +100,13 @@
                     <div class="carousel-item active" data-bs-interval="3000">
                         <div class="row">
                             <div class="col">
-                                <img src="./img/01-01.jpg" class="size-400" alt="Slide 1">
+                                <img src="./img/1.jpg" class="size-400" alt="Slide 1">
                             </div>
                             <div class="col">
-                                <img src="./img/01-01.jpg" class="size-400" alt="Slide 2">
+                                <img src="./img/2.jpg" class="size-400" alt="Slide 2">
                             </div>
                             <div class="col">
-                                <img src="./img/01-01.jpg" class="size-400" alt="Slide 3">
+                                <img src="./img/3.jpg" class="size-400" alt="Slide 3">
                             </div>
                         </div>
                     </div>
@@ -104,39 +114,39 @@
                     <div class="carousel-item" data-bs-interval="3000">
                         <div class="row">
                             <div class="col">
-                                <img src="./img/01-02.jpg" class="size-400" alt="Slide 4">
+                                <img src="./img/4.jpg" class="size-400" alt="Slide 4">
                             </div>
                             <div class="col">
-                                <img src="./img/01-02.jpg" class="size-400" alt="Slide 5">
+                                <img src="./img/5.jpg" class="size-400" alt="Slide 5">
                             </div>
                             <div class="col">
-                                <img src="./img/01-02.jpg" class="size-400" alt="Slide 6">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item" data-bs-interval="3000">
-                        <div class="row">
-                            <div class="col">
-                                <img src="./img/01-03.jpg" class="size-400" alt="Slide 4">
-                            </div>
-                            <div class="col">
-                                <img src="./img/01-03.jpg" class="size-400" alt="Slide 5">
-                            </div>
-                            <div class="col">
-                                <img src="./img/01-03.jpg" class="size-400" alt="Slide 6">
+                                <img src="./img/6.jpg" class="size-400" alt="Slide 6">
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="3000">
                         <div class="row">
                             <div class="col">
-                                <img src="./img/01-04.jpg" class="size-400" alt="Slide 4">
+                                <img src="./img/7.jpg" class="size-400" alt="Slide 4">
                             </div>
                             <div class="col">
-                                <img src="./img/01-04.jpg" class="size-400" alt="Slide 5">
+                                <img src="./img/8.jpg" class="size-400" alt="Slide 5">
                             </div>
                             <div class="col">
-                                <img src="./img/01-04.jpg" class="size-400" alt="Slide 6">
+                                <img src="./img/9.jpg" class="size-400" alt="Slide 6">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <div class="row">
+                            <div class="col">
+                                <img src="./img/10.jpg" class="size-400" alt="Slide 4">
+                            </div>
+                            <div class="col">
+                                <img src="./img/11.jpg" class="size-400" alt="Slide 5">
+                            </div>
+                            <div class="col">
+                                <img src="./img/12.jpg" class="size-400" alt="Slide 6">
                             </div>
                         </div>
                     </div>
@@ -159,34 +169,34 @@
         <div class="row" id="section2">
             <div class="col-4">
                 <div class="card">
-                    <img src="./img/01-01.jpg" class="card-img-top" alt="...">
+                    <img src="./img/1.jpg" class="card-img-top size-400" style="margin-left: 100px;" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">進入商品頁面</a>
                     </div>
                 </div>
             </div>
             <div class="col-4">
                 <div class="card">
-                    <img src="./img/01-02.jpg" class="card-img-top" alt="...">
+                    <img src="./img/2.jpg" class="card-img-top size-400" style="margin-left: 100px;" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">進入商品頁面</a>
                     </div>
                 </div>
             </div>
             <div class="col-4">
                 <div class="card">
-                    <img src="./img/01-03.jpg" class="card-img-top" alt="...">
+                    <img src="./img/3.jpg" class="card-img-top size-400" style="margin-left: 100px;" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">進入商品頁面</a>
                     </div>
                 </div>
             </div>
