@@ -10,7 +10,7 @@
 </head>
 
 <body>
-
+<!-- 放modal button的container要跟modal內容資料分開 -->
   <div class="container mt-3">
     <h3>Modal Example</h3>
     <p>Click on the button to open the modal.</p>
@@ -18,16 +18,66 @@
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
       Open modal
     </button>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#myModallg">
       Open modal modal-lg
     </button>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModalfull">
       Open modal modal-fullscreen
     </button>
   </div>
 
   <!-- The Modal -->
   <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          Modal body..
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- The Modal end -->
+  <!-- The Modallg -->
+  <div class="modal" id="myModallg">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          Modal body..
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- The Modallg end -->
+  <!-- The Modalfull -->
+  <div class="modal" id="myModalfull">
     <div class="modal-dialog modal-fullscreen">
       <div class="modal-content">
 
@@ -50,6 +100,7 @@
       </div>
     </div>
   </div>
+  <!-- The Modalfull end -->
 
 
 </body>
