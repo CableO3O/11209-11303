@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    <title>Title</title>
+    <style>
+        body {
+            padding-top: 105px;
+            background-color:darkslateblue
+        }
+
+        .sticky-top {
+            position: fixed;
+            top: 0;
+            width: 99%;
+            height: 80px;
+            background-color: lightblue;
+        }
+@media (max-width: 991px) {
+  .bg-small-screen {
+    background-color: #f8f9fa; /* 自訂顏色，您可以更改為所需的顏色 */
+  }
+}
+.flex{
+    display: flex;
+}
+.size-400{
+    width: 400px;
+    height: 400px;
+
+}
+</style>
+    </style>
+</head>
+
+<body>
+    <div id="top" style="height: 20px;"></div>
+    <!-- 置頂選單 -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top ">
+                    <a class="navbar-brand ms-5" href="#top">首頁</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse bg-small-screen" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#section1">照片輪播</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#section2">card</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link disabled" aria-disabled="true">歡迎登入!OOO</a>
+                            </li>
+                        </ul>
+                        <button class="btn btn-primary me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                            會員
+                          </button>
+                        <form class="d-flex me-5" role="search" >
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                        
+                    </div>
+                </nav>
+            </div>
+        </div>
+    <!-- 照片輪播 -->
+    <div class="row justify-content-center align-items-center" style="padding: 100px;" id="section1">
+        <div class="col-10">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="text-align: center;">
+                <div class="carousel-inner">
+                    <!-- 第一個輪播項 -->
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <div class="row">
+                            <div class="col">
+                                <img src="./img/01-01.jpg" class="size-400" alt="Slide 1">
+                            </div>
+                            <div class="col">
+                                <img src="./img/01-01.jpg" class="size-400" alt="Slide 2">
+                            </div>
+                            <div class="col">
+                                <img src="./img/01-01.jpg" class="size-400" alt="Slide 3">
+                            </div>
+                            <!-- 根據需要添加更多列 -->
+                        </div>
+                    </div>
+                    <!-- 第二個輪播項 -->
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <div class="row">
+                            <div class="col">
+                                <img src="./img/01-02.jpg" class="size-400" alt="Slide 4">
+                            </div>
+                            <div class="col">
+                                <img src="./img/01-02.jpg" class="size-400" alt="Slide 5">
+                            </div>
+                            <div class="col">
+                                <img src="./img/01-02.jpg" class="size-400" alt="Slide 6">
+                            </div>
+                            <!-- 根據需要添加更多列 -->
+                        </div>
+                    </div>
+                    <!-- 根據需要添加更多輪播項 -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">上一張</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">下一張</span>
+                </button>
+            </div>
+        </div>
+    </div>
+        <br><br><br><br><br>
+        <!-- 廣告卡片 -->
+        <div class="row" id="section2">
+            <div class="col-4">
+                <div class="card">
+                    <img src="./img/01-01.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <img src="./img/01-02.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <img src="./img/01-03.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+    <!-- 點擊顯示視窗 -->
+    <div class="row">
+        <div class="col-8">
+            <div class="row">
+                <div class="col">
+                    <p class="d-inline-flex gap-1">
+                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample11"
+                            role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first
+                            element</a>
+                    </p>
+                    <div class="collapse multi-collapse" id="multiCollapseExample11">
+                        <div class="card card-body">
+                            Some placeholder content for the first collapse component of this multi-collapse
+                            example. This panel is hidden by default but revealed when the user activates the
+                            relevant trigger.
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <p class="d-inline-flex gap-1">
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#multiCollapseExample22" aria-expanded="false"
+                            aria-controls="multiCollapseExample2">Toggle second element</button>
+                    </p>
+                    <div class="collapse multi-collapse" id="multiCollapseExample22">
+                        <div class="card card-body">
+                            Some placeholder content for the second collapse component of this multi-collapse
+                            example. This panel is hidden by default but revealed when the user activates the
+                            relevant trigger.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 下拉式選單 -->
+        <div class="col-4">
+            <div class="row">
+                <div class="col">
+                    <p class="d-inline-flex gap-1">
+                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+                            aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+                    </p>
+                    <div class="collapse multi-collapse" id="multiCollapseExample1">
+                        <div class="card card-body">
+                            Some placeholder content for the first collapse component of this multi-collapse
+                            example. This panel is hidden by default but revealed when the user activates the
+                            relevant trigger.
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <p class="d-inline-flex gap-1">
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#multiCollapseExample2" aria-expanded="false"
+                            aria-controls="multiCollapseExample2">Toggle second element</button>
+                    </p>
+                    <div class="collapse multi-collapse" id="multiCollapseExample2">
+                        <div class="card card-body">
+                            Some placeholder content for the second collapse component of this multi-collapse
+                            example. This panel is hidden by default but revealed when the user activates the
+                            relevant trigger.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br>
+        <div class="col-4">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false" style="width: 100%;">
+                    Dropdown button
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" style="width: 100%;">
+                    <li><a class="dropdown-item active" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false" style="width: 100%;">
+                    Dropdown button
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" style="width: 100%;">
+                    <li><a class="dropdown-item active" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+    <br><br><br><br><br>
+    <div class="offcanvas offcanvas-end" id="demo">
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title">會員選單</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p><a href="#">會員中心</a></p>
+          <p><a href="#">購物車</a></p>
+          <p><a href="#">消費紀錄</a></p>
+          <button class="btn btn-secondary" type="button">登出</button>
+        </div>
+      </div>
+    <br><br><br><br><br>
+</body>
+
+</html>
