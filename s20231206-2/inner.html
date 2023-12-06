@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="myh1">heading</h1>
+    <a href="#">link</a>
+    <button type="button" id="mybtn">mybtn</button>
+
+    <script>
+        // 綁定
+        let mybtn = document.getElementById('mybtn');
+        let myh1 = document.getElementById('myh1');
+
+        // 動作
+        // 監聽mybtn如果有點擊就執行
+        //                     執行點擊  執行函式
+        mybtn.addEventListener('click', function () {
+            myh1.innerHTML = "HELLO h1";
+        });
+        // console.log()就像php的print_r()顯示括弧內的東西
+        console.log(mybtn);
+        console.log('mybtn click ok');
+        console.log(myh1);
+
+        </script>
+</body>
+
+</html>
