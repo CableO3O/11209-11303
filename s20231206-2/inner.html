@@ -11,10 +11,12 @@
     <h1 id="myh1">heading</h1>
     <a href="#">link</a>
     <button type="button" id="mybtn">mybtn</button>
+    <button type="button" id="mybtn1">mybtn1</button>
 
     <script>
         // 綁定
         let mybtn = document.getElementById('mybtn');
+        let mybtn1 = document.getElementById('mybtn1');
         let myh1 = document.getElementById('myh1');
 
         // 動作
@@ -22,6 +24,9 @@
         //                     執行點擊  執行函式
         mybtn.addEventListener('click', function () {
             myh1.innerHTML = "HELLO h1";
+        });
+        mybtn1.addEventListener('click', function () {
+            myh1.innerHTML = "bye h1";
         });
         // console.log()就像php的print_r()顯示括弧內的東西
         console.log(mybtn);
