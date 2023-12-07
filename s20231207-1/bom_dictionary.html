@@ -25,9 +25,11 @@
       </thead>
       <tbody>
         <tr>
-          <td id="word">beneath</td>
           <td>
-            <button type="button" id="myBtn">myBtn</button>
+            <input type="text" id="word" class="form-control" placeholder="Enter Text" name="word">
+          </td>
+          <td>
+            <button type="button" id="myBtn" class="btn btn-primary">search</button>
           </td>
         </tr>
       </tbody>
@@ -40,18 +42,19 @@
     let word = document.getElementById('word');
     let myBtn = document.getElementById('myBtn');
 
-    console.log('word', word);
-    console.log('myBtn', myBtn);
+    // console.log('word', word);
+    // console.log('myBtn', myBtn);
 
-    let searchText = word.innerText;
-    console.log('searchText', searchText);
-
+    // console.log('searchText', searchText);
+    
     // 2.動作
     myBtn.addEventListener('click', function () {
-      // console.log('myBtn ok');
+        // console.log('myBtn ok');
+        let searchText = word.value;
       window.open('https://www.merriam-webster.com/dictionary/' + searchText);
       window.open('https://dictionary.cambridge.org/dictionary/english-chinese-traditional/' + searchText);
       window.open('https://www.ldoceonline.com/dictionary/' + searchText);
+      window.open('https://www.google.com/search?q=' + searchText + '&sca_esv=588643820&tbm=isch&source=lnms&sa=X&ved=2ahUKEwiN5qXa2fyCAxXwqFYBHT3AAjwQ_AUoAnoECAIQBA&biw=1920&bih=919&dpr=1' + searchText);
 
     });
 
