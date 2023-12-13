@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .traffic-light {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .light {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 10px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="traffic-light">
+        <div class="red light"></div>
+        <div class="yellow light"></div>
+        <div class="green light"></div>
+    </div>
+    <script>
+        function changeLights() {
+            const lights = document.querySelectorAll('.light');
+
+            // 循环处理每个灯
+            lights.forEach(light => {
+                if (light.classList.contains('red')) {
+                    light.classList.remove('red');
+                    light.classList.add('green');
+                } else if (light.classList.contains('green')) {
+                    light.classList.remove('green');
+                    light.classList.add('yellow');
+                } else if (light.classList.contains('yellow')) {
+                    light.classList.remove('yellow');
+                    light.classList.add('red');
+                }
+            });
+        }
+
+        // 每隔一段时间（例如3秒）切换红绿灯状态
+        setInterval(changeLights, 3000);
+    </script>
+</body>
+
+</html>
