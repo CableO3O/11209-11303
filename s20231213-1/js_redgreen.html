@@ -34,7 +34,7 @@
 
     #myImg {
       position: absolute;
-      right: -600px;
+      right: 300px;
       /* right: 1400px; */
       bottom: 0px;
     }
@@ -43,18 +43,14 @@
 
     .myImgAnimation {
       position: absolute;
-      right: -600px;
-      /* right: 1400px; */
-      bottom: 0px;
       animation-name: example;
       animation-duration: 8s;
     }
 
     .myImgAnimationInit {
       position: absolute;
-      right: -600px;
-      /* right: 1400px; */
-      bottom: 0px;
+      animation-name: examplestart;
+      animation-duration: 3s;
     }
 
 
@@ -62,13 +58,27 @@
     @keyframes example {
       0% {
         /* background-color: red; */
-        right: -500px;
+        right: 300px;
         bottom: 0px;
       }
 
       100% {
         /* background-color: lightblue; */
         right: 2500px;
+        bottom: 0px;
+        /* transform: rotate(0deg); */
+      }
+    }
+    @keyframes examplestart {
+      0% {
+        /* background-color: red; */
+        right: -200px;
+        bottom: 0px;
+      }
+
+      100% {
+        /* background-color: lightblue; */
+        right: 300px;
         bottom: 0px;
         /* transform: rotate(0deg); */
       }
@@ -109,35 +119,27 @@
 
 
   <script>
-    // initFun
-    function initFun() {
-      myBtn.setAttribute('class', 'btn btn-primary btn-lg mt-5 d-block');
-      myImg.setAttribute('class', 'myImgAnimationInit');
-    }
-
-
+      // initFun
+      // 初始化
+      
+      function initFun() {
+        myBtn.setAttribute('class', 'btn btn-primary btn-lg mt-5 d-block');
+        myImg.setAttribute('class', 'myImgAnimationInit');
+      }
+    
     let light1 = document.getElementById('light1');
     let light2 = document.getElementById('light2');
     let light3 = document.getElementById('light3');
     let myBtn = document.getElementById('myBtn');
     let myImg = document.getElementById('myImg');
 
-    // init action
-    // myImg.setAttribute('class', 'd-none');
-    initFun();
-
     console.log('light1', light1);
     console.log('light2', light2);
     console.log('light3', light3);
     console.log('myBtn', myBtn);
-
+    
     myBtn.addEventListener('click', function () {
       myBtn.setAttribute('class', 'btn btn-primary btn-lg mt-5 d-none');
-      // console.log('myBtn', myBtn);
-      // light1.setAttribute('class','item bg-danger rounded-circle');
-      // light1.setAttribute('class', 'item bg-success rounded-circle');
-      // light2.setAttribute('class', 'item bg-success rounded-circle');
-      // light3.setAttribute('class', 'item bg-success rounded-circle');
 
       // time start
       setTimeout(function () {
@@ -158,17 +160,18 @@
         myImg.setAttribute('class', 'myImgAnimation');
       }, 4500);
       // time end
-
+      setTimeout(function(){
+        myImg.setAttribute('class', 'myImgAnimationInit');
+      },8000)
       // red
       setTimeout(function () {
         light1.setAttribute('class', 'item bg-danger rounded-circle');
         light2.setAttribute('class', 'item border rounded-circle');
         light3.setAttribute('class', 'item border rounded-circle');
 
-
         initFun();
 
-      }, 10000);
+    }, 10000);
 
     });
 
