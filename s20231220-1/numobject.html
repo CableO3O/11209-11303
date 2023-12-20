@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let calobj = {
+            num1 : 100,
+            num2 : 50,
+            sumfun: function () {
+                let result = this.num1 + this.num2;
+                console.log('num1 + num2=', result);
+            },
+            subfun: function () {
+                let result = this.num1 - this.num2;
+                console.log('num1 - num2=', result);
+            },
+            multifun: function () {
+                let result = this.num1 * this.num2;
+                console.log('num1 * num2=', result);
+            },
+            divfun: function () {
+                let result = this.num1 / this.num2;
+                console.log('num1 / num2=', result);
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
