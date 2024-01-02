@@ -71,6 +71,11 @@
             <input type="text" readonly class="form-control my-total" name="" id="item1Total" value="50">
           </td>
         </tr>
+        <tr>
+          <td colspan="4">
+            <span id="resultSpan"></span>
+          </td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -95,6 +100,15 @@
           sum+=getValue;
         })
         console.log('sum',sum);
+        if (sum>=500) {
+          result=sum*0.8;
+          resulttext=`滿500打8折 ${result}`;
+          resultSpan.attr('class','text-danger')
+        }else{
+          resulttext=`滿500打8折 ${sum}`;
+          resultSpan.attr('class','');
+        }
+        resultSpan.text(resulttext);
       }
 
 
@@ -104,6 +118,7 @@
       const myPrice = $('.my-price');
       const myNum = $('.my-num');
       const myTotal = $('.my-total');
+      const resultSpan = $('#resultSpan');
       // item1Price.val('123');
       console.log('myPrice', myPrice);
       console.log('myNum', myNum);
