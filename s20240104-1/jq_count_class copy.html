@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col">
+                <input type="number" name="" id="" class="my-num1 form-control" value="">
+            </div>
+            <div class="col">
+                <select name="" id="" class="my-opt form-select">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+            </div>
+            <div class="col">
+                <input type="number" name="" id="" class="my-num2 form-control" value="">
+            </div>
+            <div class="col d-grid">
+                <button type="button" class="btn btn-primary my-btn" id="">=</button>
+            </div>
+            <div class="col">
+                <input type="text" name="" id="" readonly class="my-result form-control">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col">
+                <input type="number" name="" id="" class="my-num1 form-control" value="">
+            </div>
+            <div class="col">
+                <select name="" id="" class="my-opt form-select">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+            </div>
+            <div class="col">
+                <input type="number" name="" id="" class="my-num2 form-control" value="">
+            </div>
+            <div class="col d-grid">
+                <button type="button" class="btn btn-primary my-btn" id="">=</button>
+            </div>
+            <div class="col">
+                <input type="text" name="" id="" readonly class="my-result form-control">
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(document).ready(function () {
+            const num1 = $('.my-num1');
+            const num2 = $('.my-num2');
+            const opt = $('.my-opt');
+            const myBtn = $('.my-btn');
+            const result = $('.my-result');
+            // console.log(Num1);
+            // console.log(Num2);
+            // console.log(Opt);
+            // console.log(myBtn);
+            // console.log(result);
+            myBtn.click(function () {
+                
+                const nowrow=$(this).parent().parent().parent();
+                const nownum1 = nowrow.find('.my-num1');
+                const nownum2 = nowrow.find('.my-num2');
+                const nowopt = nowrow.find('.my-opt');
+                const nowresult = nowrow.find('.my-result');
+                
+                let Num1val = Number(nownum1.val());
+                let Num2val = Number(nownum2.val());
+                let Optval = nowopt.val();
+                let resultval = 0;
+                if (nownum1.val().length <= 0 || nownum2.val().length <= 0) {
+                    alert('請填入數字');
+                    return false;
+                }
+
+                    switch (Optval) {
+                        case '+':
+                            resultval = Num1val + Num2val;
+                            // console.log('resultval',resultval);
+                            break;
+                        case '-':
+                            resultval = Num1val - Num2val;
+                            break;
+                        case '*':
+                            resultval = Num1val * Num2val;
+                            break;
+                        case '/':
+                            if (Num2val !== 0) {
+                                resultval = Num1val / Num2val;
+                            } else {
+                                resultval = '無法除以0';
+                            }
+                            break;
+                    }
+                    // console.log(resultval);
+                    nowresult.val(resultval);
+                
+            })
+        })
+
+    </script>
+</body>
+
+</html>
