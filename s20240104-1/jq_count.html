@@ -16,15 +16,15 @@
                 <input type="number" name="" id="num1" class="form-control" value="">
             </div>
             <div class="col">
-                <input type="number" name="" id="num2" class="form-control" value="">
-            </div>
-            <div class="col">
                 <select name="" id="Opt" class="form-select">
                     <option value="+">+</option>
                     <option value="-">-</option>
                     <option value="*">*</option>
                     <option value="/">/</option>
                 </select>
+            </div>
+            <div class="col">
+                <input type="number" name="" id="num2" class="form-control" value="">
             </div>
             <div class="col d-grid">
                 <button type="button" class="btn btn-primary" id="myBtn">=</button>
@@ -50,42 +50,47 @@
             const Num1 = $('#num1');
             const Num2 = $('#num2');
             const Opt = $('#Opt');
-            const myBtn=$('#myBtn');
-            const result=$('#result');
+            const myBtn = $('#myBtn');
+            const result = $('#result');
             // console.log(Num1);
             // console.log(Num2);
             // console.log(Opt);
             // console.log(myBtn);
             // console.log(result);
             myBtn.click(function () {
-                let Num1val=Number(Num1.val());
-                let Num2val=Number(Num2.val());
-                // console.log('Num1val',Num1val);
-                // console.log('Num2val',Num2val);
-                let Optval=Opt.val();
-                // console.log(Optval);
-                let resultval=0;
-                switch (Optval) {
-                    case '+':
-                        resultval=Num1val+Num2val;
-                        // console.log('resultval',resultval);
-                        break;
-                    case '-':
-                    resultval=Num1val-Num2val;
-                        break;
-                    case '*':
-                    resultval=Num1val*Num2val;
-                        break;
-                    case '/':
-                        if (Num2val!==0) {
-                            resultval=Num1val/Num2val;
-                        }else{
-                            resultval='無法除以0';
-                        }
-                        break;
+                if (Num1.val().length <= 0 || Num2.val().length <= 0) {
+                    alert('請填入數字');
+                } else {
+
+                    let Num1val = Number(Num1.val());
+                    let Num2val = Number(Num2.val());
+                    // console.log('Num1val',Num1val);
+                    // console.log('Num2val',Num2val);
+                    let Optval = Opt.val();
+                    // console.log(Optval);
+                    let resultval = 0;
+                    switch (Optval) {
+                        case '+':
+                            resultval = Num1val + Num2val;
+                            // console.log('resultval',resultval);
+                            break;
+                        case '-':
+                            resultval = Num1val - Num2val;
+                            break;
+                        case '*':
+                            resultval = Num1val * Num2val;
+                            break;
+                        case '/':
+                            if (Num2val !== 0) {
+                                resultval = Num1val / Num2val;
+                            } else {
+                                resultval = '無法除以0';
+                            }
+                            break;
                     }
                     // console.log(resultval);
                     result.val(resultval);
+                }
             })
         })
 
