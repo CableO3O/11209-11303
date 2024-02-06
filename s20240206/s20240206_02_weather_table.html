@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
 </head>
 
@@ -18,11 +18,11 @@
     <table class="display" id="mytable">
       <thead>
         <tr>
-          <th>編號</th>
-          <th>縣市</th>
-          <th>溫度</th>
-          <th>天氣(日)</th>
-          <th>天氣(夜)</th>
+          <th width="7%">編號</th>
+          <th width="7%">縣市</th>
+          <th id="title12">desc12</th>
+          <th id="title24">desc24</th>
+          <th id="title36">desc36</th>
         </tr>
       </thead>
       <tbody>
@@ -30,7 +30,7 @@
         <td></td>
         <td></td>
         <td>
-          
+
         </td>
         <td></td>
       </tbody>
@@ -45,7 +45,10 @@
   <script>
     $(document).ready(function () {
       const tbody = $("tbody");
-      const mytable=$("#mytable");
+      const mytable = $("#mytable");
+      const title12 = $("#title12");
+      const title24 = $("#title24");
+      const title36 = $("#title36");
       let url = 'https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWA-5BC7C3AF-3FC8-48D7-8084-C22F5C72DF41'
       $.ajax({
         type: "get",
@@ -58,30 +61,87 @@
           // console.log('res.["records"]',res['records']);
           // console.log('res.records.datasetDescription',res.records.datasetDescription);
           let nowLocation = res.records.location;
-          console.log('nowLocation',nowLocation);
+          console.log('nowLocation', nowLocation);
+
+          let title12text = res.records.location[1].weatherElement[2].time[0].startTime
+          let title24text = res.records.location[1].weatherElement[2].time[1].startTime
+          let title36text = res.records.location[1].weatherElement[2].time[2].startTime
+          title12.text(title12text)
+          title24.text(title24text)
+          title36.text(title36text)
+          let time12 = new Date(title12text)
+          let time24 = new Date(title24text)
+          let time36 = new Date(title36text)
+          let time12hour=time12.getHours();
+          let time24hour=time24.getHours();
+          let time36hour=time36.getHours();
+          let daynight_12='day'
+          let daynight_24='day'
+          let daynight_36='day'
+          switch (time12hour) {
+              case 12:
+              case 18:
+              daynight_12='night'
+              break;
+          
+            default:
+              break;
+          }
+          switch (time24hour) {
+              case 12:
+              case 18:
+              daynight_24='night'
+              break;
+          
+            default:
+              break;
+          }
+          switch (time36hour) {
+              case 12:
+              case 18:
+              daynight_36='night'
+              break;
+          
+            default:
+              break;
+          }
           $.each(nowLocation, function (key, value) {
             // console.log('key',key);
             // console.log('value',value);
-            let nowId=key+1;
-            let stringID=nowId.toString().padStart(2,"0")
+            let nowId = key + 1;
+            let stringID = nowId.toString().padStart(2, "0")
             let nowLocationName = value.locationName;
-            let min=value.weatherElement[2].time[0].parameter.parameterName
-            let max=value.weatherElement[4].time[0].parameter.parameterName
-            let day=value.weatherElement[0].time[0].parameter.parameterName
-            let dayvalue=value.weatherElement[0].time[0].parameter.parameterValue.toString().padStart(2,"0")
-            let night=value.weatherElement[0].time[1].parameter.parameterName
-            let nightvalue=value.weatherElement[0].time[1].parameter.parameterValue.toString().padStart(2,"0")
+
+            // 12
+            let desc12min = value.weatherElement[2].time[0].parameter.parameterName
+            let desc12max = value.weatherElement[4].time[0].parameter.parameterName
+            let desc12day = value.weatherElement[0].time[0].parameter.parameterName
+            let desc12dayvalue = value.weatherElement[0].time[0].parameter.parameterValue.toString().padStart(2, "0")
+
+            // 24
+            let desc24min = value.weatherElement[2].time[1].parameter.parameterName
+            let desc24max = value.weatherElement[4].time[1].parameter.parameterName
+            let desc24day = value.weatherElement[0].time[1].parameter.parameterName
+            let desc24dayvalue = value.weatherElement[0].time[1].parameter.parameterValue.toString().padStart(2, "0")
+
+            // 36
+            let desc36min = value.weatherElement[2].time[2].parameter.parameterName
+            let desc36max = value.weatherElement[4].time[2].parameter.parameterName
+            let desc36day = value.weatherElement[0].time[2].parameter.parameterName
+            let desc36dayvalue = value.weatherElement[0].time[2].parameter.parameterValue.toString().padStart(2, "0")
+
             // console.log('nowLocationName', nowLocationName);
             let content = `
             <tr>
               <td>${stringID}</td>
               <td>${nowLocationName}</td>
-              <td>${min}-${max}</td>
-              <td>${day}<img src="./imgs/${dayvalue}.svg" alt=""></td>
-              <td>${night}<img src="./imgs/${nightvalue}.svg" alt=""></td>
-            </tr>
-          `;
-          tbody.append(content);
+              <td>${desc12min}-${desc12max}${desc12day}<img src="./imgs/${daynight_12}/${desc12dayvalue}.svg" alt=""></td>
+              <td>${desc24min}-${desc24max}${desc24day}<img src="./imgs/${daynight_24}/${desc24dayvalue}.svg" alt=""></td>
+              <td>${desc36min}-${desc36max}${desc36day}<img src="./imgs/${daynight_36}/${desc36dayvalue}.svg" alt=""></td>
+              </tr>
+              `;
+            tbody.append(content);
+
           });
           mytable.DataTable();
         }
