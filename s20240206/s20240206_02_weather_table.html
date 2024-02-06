@@ -18,12 +18,21 @@
     <table class="display" id="mytable">
       <thead>
         <tr>
-          <th class="text-center">編號</th>
-          <th class="text-center">縣市</th>
+          <th>編號</th>
+          <th>縣市</th>
+          <th>溫度</th>
+          <th>天氣(日)</th>
+          <th>天氣(夜)</th>
         </tr>
       </thead>
       <tbody>
-        
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          
+        </td>
+        <td></td>
       </tbody>
     </table>
   </div>
@@ -45,22 +54,31 @@
         // dataType:json,
         success: function (res) {
           // console.log('res',res);
-          console.log('res.records', res.records);
+          // console.log('res.records', res.records);
           // console.log('res.["records"]',res['records']);
           // console.log('res.records.datasetDescription',res.records.datasetDescription);
           let nowLocation = res.records.location;
-          // console.log('nowLocation',nowLocation);
+          console.log('nowLocation',nowLocation);
           $.each(nowLocation, function (key, value) {
             // console.log('key',key);
             // console.log('value',value);
             let nowId=key+1;
             let stringID=nowId.toString().padStart(3,"0")
             let nowLocationName = value.locationName;
+            let min=value.weatherElement[2].time[0].parameter.parameterName
+            let max=value.weatherElement[4].time[0].parameter.parameterName
+            let day=value.weatherElement[0].time[0].parameter.parameterName
+            let dayvalue=value.weatherElement[0].time[0].parameter.parameterValue.toString().padStart(2,"0")
+            let night=value.weatherElement[0].time[1].parameter.parameterName
+            let nightvalue=value.weatherElement[0].time[1].parameter.parameterValue.toString().padStart(2,"0")
             // console.log('nowLocationName', nowLocationName);
             let content = `
             <tr>
-              <td class="text-center">${stringID}</td>
-              <td class="text-center">${nowLocationName}</td>
+              <td>${stringID}</td>
+              <td>${nowLocationName}</td>
+              <td>${min}-${max}</td>
+              <td>${day}<img src="./imgs/${dayvalue}.svg" alt=""></td>
+              <td>${night}<img src="./imgs/${nightvalue}.svg" alt=""></td>
             </tr>
           `;
           tbody.append(content);
