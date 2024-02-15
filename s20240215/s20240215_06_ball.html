@@ -21,8 +21,8 @@
                 <div>
                     倒數計時
                 </div>
-                <div id="count">
-                    0
+                <div id="time">
+                    10
                 </div>
             </div>
             <hr>
@@ -30,7 +30,7 @@
                 <div>
                     分數
                 </div>
-                <div id="scorediv">
+                <div id="score">
                     0
                 </div>
             </div>
@@ -55,25 +55,44 @@
 
     <script>
         $(document).ready(function () {
+            // 定義
             const startbtn = $("#start");
             const resetbtn = $("#reset");
             const shootbtn = $("#shoot");
-            const scorediv = $("#scorediv");
-            let score=0;
-
+            const nowscore = $("#score");
+            const nowtime = $("#time");
+            let score = 0;
+            let time = 9;
+            let myInterval;
+            // 開始遊戲按鈕
             startbtn.click(function (e) {
                 startbtn.hide();
                 shootbtn.show();
+                myInterval = setInterval(() => {
+                    if (time <= 0) {
+                        clearInterval(myInterval);
+                    }
+                    nowtime.text(time);
+                    time -= 1;
+                }, 900)
             })
 
+            // 投籃按鈕
             shootbtn.click(function (e) {
-                score+=3;
-                scorediv.text(score);
-             })
+                score += 3;
+                nowscore.text(score);
+            })
+
+            //  重置按鈕
             resetbtn.click(function (e) {
-                score=0;
-                scorediv.text(score);
-             })
+                clearInterval(myInterval);
+                score = 0;
+                time = 10;
+                nowtime.text(time);
+                nowscore.text(score);
+                startbtn.show();
+                shootbtn.hide();
+            })
 
         });
 
