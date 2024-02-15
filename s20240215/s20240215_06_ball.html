@@ -79,7 +79,11 @@
 
             // 投籃按鈕
             shootbtn.click(function (e) {
-                score += 3;
+                if (time > 5) {
+                    score += 2;
+                } else {
+                    score += 3;
+                }
                 nowscore.text(score);
             })
 
