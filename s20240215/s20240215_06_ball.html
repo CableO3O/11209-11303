@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1 class="text-center">投籃大賽</h1>
+        <div class="container text-center mt-5" style="border: 1px solid black;">
+            <h2 class="text-success mt-3">歷史最高分數</h2>
+            <div class="text-danger" style="font-size: 24px;">
+                <div>
+                    倒數計時
+                </div>
+                <div id="count">
+                    0
+                </div>
+            </div>
+            <hr>
+            <div class="text-primary" style="font-size: 24px;">
+                <div>
+                    分數
+                </div>
+                <div id="scorediv">
+                    0
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5 text-center" style="border: 1px solid black;">
+            <div class="row justify-content-center mt-3 mb-3" style="height: 5vh;">
+                <div class="col-5">
+                    <button id="start" class="btn btn-primary" style="width: 100%;height: 100%;">遊戲開始</button>
+                    <button id="shoot" class="btn btn-primary"
+                        style="width: 100%;height: 100%;display: none;">投籃</button>
+                </div>
+                <div class="col-5">
+                    <button id="reset" class="btn btn-warning" style="width: 100%;height: 100%;">重置</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(document).ready(function () {
+            const startbtn = $("#start");
+            const resetbtn = $("#reset");
+            const shootbtn = $("#shoot");
+            const scorediv = $("#scorediv");
+            let score=0;
+
+            startbtn.click(function (e) {
+                startbtn.hide();
+                shootbtn.show();
+            })
+
+            shootbtn.click(function (e) {
+                score+=3;
+                scorediv.text(score);
+             })
+            resetbtn.click(function (e) {
+                score=0;
+                scorediv.text(score);
+             })
+
+        });
+
+    </script>
+</body>
+
+</html>
