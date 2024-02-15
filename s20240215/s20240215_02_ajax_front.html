@@ -28,8 +28,10 @@
       // 同 domain cors fix 
       // front localhost ex. php xampp open
       // back localhost
-
-      let url = 'http://localhost/cable11209-11303/s20240215/s20240215_03_php_back.php';
+      // 絕對路徑用法盡量不要用
+      // let url = 'http://localhost/cable11209-11303/s20240215/s20240215_03_php_back.php';
+      // 相對路徑用法
+      let url='./s20240215_03_php_back.php';
       $.ajax({
         type: "get",
         url: url,
