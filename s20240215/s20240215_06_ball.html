@@ -39,8 +39,8 @@
             <div class="row justify-content-center mt-3 mb-3" style="height: 5vh;">
                 <div class="col-5">
                     <button id="start" class="btn btn-primary" style="width: 100%;height: 100%;">遊戲開始</button>
-                    <button id="shoot" class="btn btn-primary"
-                        style="width: 100%;height: 100%;display: none;">投籃</button>
+                    <button id="shoot" class="btn btn-primary" style="width: 100%;height: 100%;display: none;">投籃</button>
+                    <button id="finish" class="btn btn-danger" style="width: 100%;height: 100%;display: none;">遊戲結束</button>
                 </div>
                 <div class="col-5">
                     <button id="reset" class="btn btn-warning" style="width: 100%;height: 100%;">重置</button>
@@ -59,6 +59,7 @@
             const startbtn = $("#start");
             const resetbtn = $("#reset");
             const shootbtn = $("#shoot");
+            const finishbtn = $("#finish");
             const nowscore = $("#score");
             const nowtime = $("#time");
             let score = 0;
@@ -71,6 +72,9 @@
                 myInterval = setInterval(() => {
                     if (time <= 0) {
                         clearInterval(myInterval);
+                        shootbtn.hide();
+                        finishbtn.show();
+
                     }
                     nowtime.text(time);
                     time -= 1;
@@ -96,6 +100,7 @@
                 nowscore.text(score);
                 startbtn.show();
                 shootbtn.hide();
+                finishbtn.hide();
             })
 
         });
