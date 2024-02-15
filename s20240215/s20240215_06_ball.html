@@ -16,7 +16,8 @@
     <div class="container-fluid">
         <h1 class="text-center">投籃大賽</h1>
         <div class="container text-center mt-5" style="border: 1px solid black;">
-            <h2 class="text-success mt-3">歷史最高分數</h2>
+            <h2 class="text-success mt-3">歷史最高分數:<span id="highscore"></span></h2>
+            
             <div class="text-danger" style="font-size: 24px;">
                 <div>
                     倒數計時
@@ -62,9 +63,12 @@
             const finishbtn = $("#finish");
             const nowscore = $("#score");
             const nowtime = $("#time");
+            const highscorespan = $("#highscore");
             let score = 0;
             let time = 9;
+            let highscore= localStorage.getItem("highscore");
             let myInterval;
+            highscorespan.text(highscore);
             // 開始遊戲按鈕
             startbtn.click(function (e) {
                 startbtn.hide();
@@ -74,7 +78,11 @@
                         clearInterval(myInterval);
                         shootbtn.hide();
                         finishbtn.show();
-
+                        let getscore=score;
+                        if (highscore<getscore) {
+                            localStorage.setItem("highscore",getscore);
+                            highscorespan.text(getscore);
+                        }
                     }
                     nowtime.text(time);
                     time -= 1;
